@@ -1,0 +1,51 @@
+openapi: 3.0.3
+info:
+  title: DRF Ecommerce API
+  version: 1.0.0
+  description: DRF Ecommerce API Developed By Kiran
+paths:
+  /api/brand/:
+    get:
+      operationId: brand_retrieve
+      tags:
+      - brand
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/category/:
+    get:
+      operationId: category_retrieve
+      tags:
+      - category
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/product/:
+    get:
+      operationId: product_retrieve
+      tags:
+      - product
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
